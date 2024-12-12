@@ -1,0 +1,133 @@
+/* SignUpPage.css */
+
+/* Whole container styling */
+.signup-whole-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background: #f4f4f4; */
+    font-family: 'Roboto', sans-serif;
+    background-color: #199fc0;
+  
+    border-radius: 2rem;
+  }
+  
+  .signup-two-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 2rem;
+  }
+  
+  /* Form container */
+  .signup-container {
+    width: 35%;
+    background-color: #80bdda;
+    border-radius: 2rem;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .signup-container h2 {
+    /* color: #164f66;
+    border-bottom: 3px solid#164f66;
+    margin-bottom: 20px;
+    font-size: 2rem; */
+  
+  
+    background-color: #199fc0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+  
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form-group input.error {
+    border: 2px solid #e74c3c;
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #164f66;
+  
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #92c2f5;
+    color: black;
+  
+  }
+  
+  .success-message {
+    color: #27ae60;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /*.signup-image {
+    width: 60%;
+    background: url("../images/signimg2.jpg") no-repeat center center/contain;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }*/
+
+  
