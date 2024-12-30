@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./SignUpPage.css";
 
@@ -15,7 +15,7 @@ const SignUpPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [serverError, setServerError] = useState("");
-  const navigate = useNavigate('');
+ // const navigate = useNavigate('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -80,7 +80,7 @@ const SignUpPage = () => {
           setIsSubmitted(true);
           setServerError(""); // Clear any previous errors
         }
-        navigate("/LoginPage");
+       // navigate("/LoginPage");
       } catch (error) {
         if (error.response && error.response.data.error) {
           setServerError(error.response.data.error);
@@ -92,12 +92,11 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="signup-whole-container">
-      <div className="signup-two-container">
-        <div className="signup-container">
+    <div className="message-container">
+      <div className="form-grid">
           <h2>Sign Up</h2>
           <form onSubmit={handleSubmit} noValidate>
-            <div className="form-group">
+            <div className="form-field">
               <label htmlFor="fullName">Full Name</label>
               <input
                 type="text"
@@ -110,7 +109,7 @@ const SignUpPage = () => {
               {errors.fullName && <p className="error-text">{errors.fullName}</p>}
             </div>
 
-            <div className="form-group">
+            <div className="form-field">
               <label htmlFor="phonenumber">Mobile Number</label>
               <input
                 type="number"
@@ -125,7 +124,7 @@ const SignUpPage = () => {
               )}
             </div>
 
-            <div className="form-group">
+            <div className="form-field">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -138,7 +137,7 @@ const SignUpPage = () => {
               {errors.email && <p className="error-text">{errors.email}</p>}
             </div>
 
-            <div className="form-group">
+            <div className="form-field">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -151,7 +150,7 @@ const SignUpPage = () => {
               {errors.password && <p className="error-text">{errors.password}</p>}
             </div>
 
-            <div className="form-group">
+            <div className="form-field">
               <label htmlFor="confirmPassword">Confirm Password</label>
               <input
                 type="password"
@@ -166,7 +165,7 @@ const SignUpPage = () => {
               )}
             </div>
 
-            <div className="form-group">
+            <div className="form-field">
               <button type="submit">Sign Up</button>
             </div>
 
@@ -179,9 +178,8 @@ const SignUpPage = () => {
           </form>
         </div>
 
-        <div className="signup-image"></div>
+        <div className="image-grid"></div>
       </div>
-    </div>
   );
 };
 

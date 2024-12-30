@@ -1,132 +1,63 @@
-/* SignUpPage.css */
-
-/* Whole container styling */
-.signup-whole-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  /* background: #f4f4f4; */
-  font-family: 'Roboto', sans-serif;
-  background-color: #199fc0;
-
-  border-radius: 2rem;
-}
-
-.signup-two-container{
-  display: flex;
-  width: 100%;
-  height: 100%;
+.message-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-gap: 20px; /* Space between columns */
+  align-items: center; /* Vertically center items */
+  justify-items: center; /* Horizontally center items */
+  height: 100vh; /* Full viewport height */
   padding: 20px;
-  gap: 2rem;
 }
 
-/* Form container */
-.signup-container {
-  width: 35%;
-  background-color: #80bdda;
-  border-radius: 2rem;
-  padding: 40px 20px;
+.form-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.signup-container h2 {
-  /* color: #164f66;
-  border-bottom: 3px solid#164f66;
-  margin-bottom: 20px;
-  font-size: 2rem; */
-
-
-  background-color: #199fc0;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  
-}
-
-.form-group {
+  gap: 10px;
+  max-width: 400px; /* Limit the form width */
   width: 100%;
+}
+
+.form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-  
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 100%;
-  
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.form-group input {
-
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.form-group input.error {
-  border: 2px solid #e74c3c;
-}
-
-.error-text {
-  color: #e74c3c;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #164f66;
-
-  color: #ffffff;
+.form-field label {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-grid input, .form-grid button {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-grid button {
   cursor: pointer;
-  margin-top: 10px;
-  
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  width: 100%; /* Set the button width to fill the available space */
+  padding: 15px; /* Optionally increase padding to make the button taller */
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-button[type="submit"]:hover {
-  background-color: #92c2f5;
-  color: black;
-
+.form-grid button:hover {
+  background-color: #45a049;
 }
 
-.success-message {
-  color: #27ae60;
-  font-size: 14px;
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Roboto', sans-serif;
+.image-grid {
+  background-image: url('../images/1.jpg'); /* Set the image URL here */
+  background-size: cover; /* Ensure the image covers the area */
+  background-position: center; /* Center the image */
+  height: 70%; /* Make sure it fills the div */
+  width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/*.signup-image {
-  width: 60%;
-  background: url("../images/signimg2.jpg") no-repeat center center/contain;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}*/
-

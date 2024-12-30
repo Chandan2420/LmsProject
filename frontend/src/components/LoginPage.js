@@ -22,11 +22,11 @@ const LoginPage = () => {
 };
 
   return (
-    <div className="login-wholecontainer">
-      <div className="login-two-container">
-      <div className="login-container">
+    <div className="message-container">
+      <div className="form-grid">
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
+        <div className="form-field">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -34,8 +34,8 @@ const LoginPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
-          <div>
+        </div>
+          <div className="form-field">
             <label htmlFor="password">Password</label>
             <input
               type="password"
@@ -46,14 +46,13 @@ const LoginPage = () => {
           </div>
 
          
-          <div className="form-group">
+          <div className="form-field">
             <button type="submit">Login</button>
           </div>
         </form>
       </div>
-      <div className="login-image"></div>
+      <div className="image-grid"></div>
       </div>
-    </div>
   );
 };
 
