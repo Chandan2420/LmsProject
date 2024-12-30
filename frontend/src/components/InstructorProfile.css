@@ -1,0 +1,50 @@
+.main-container{
+    display: flex; /* Enables Flexbox for alignment */
+    /*justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/instructor-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200vh;
+}
+.instructor-form{
+    margin: 0 auto; /* Keeps it centered */
+    position: relative; /* Needed to apply margin shifts */
+    left: 70px; /* Moves the form 20px to the left */
+    width: 100%; /* Adjust the width of the form as needed */
+    background: #7FCFA8;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.instructor-form label input {
+    display: block;
+    width: 80%;
+    margin-bottom: 3px;
+  }
+
+  .instructor-form label {
+    font-size: 15px; /* Makes the label text bigger */
+    font-weight: bold; /* Makes the label text bold */
+    display: block; /* Ensures proper spacing */
+    margin-bottom: 3px; /* Adds spacing below the label */
+    color: #333; /* Optional: Change the text color */
+    margin-left: 30px;
+  }
+  .instructor-form input{
+  padding: 2px; /* Adds spacing inside the input */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 8px; /* Makes the edges curved */
+  outline: none; /* Removes default outline on focus */
+  border-color: #4caf50; /* Changes border color on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Adds a soft glow on focus */
+  }
+
+  .main-container h2{
+    
+    position: relative; 
+    left: 120px; 
+  } 

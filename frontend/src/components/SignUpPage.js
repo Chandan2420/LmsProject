@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./SignUpPage.css";
 
@@ -14,6 +15,7 @@ const SignUpPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [serverError, setServerError] = useState("");
+  const navigate = useNavigate('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,10 +80,11 @@ const SignUpPage = () => {
           setIsSubmitted(true);
           setServerError(""); // Clear any previous errors
         }
+        navigate("/LoginPage");
       } catch (error) {
         if (error.response && error.response.data.error) {
           setServerError(error.response.data.error);
-        } else {
+        }else {
           setServerError("Failed to connect to the server. Please try again.");
         }
       }

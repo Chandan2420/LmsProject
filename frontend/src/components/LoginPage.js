@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./LoginPage.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const LoginPage = () => {
         const response = await axios.post('http://localhost:5000/api/LoginPage', { email, password });
         alert(response.data.message);
         localStorage.setItem('token', response.data.token);
+        navigate("/InstructorProfile");
     } catch (error) {
         alert(error.response.data.error);
     }
