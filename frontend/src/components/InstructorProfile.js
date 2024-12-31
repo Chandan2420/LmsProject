@@ -193,10 +193,7 @@ const InstructorProfile = () => {
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",
-              }}
-            >
-              Submit
-            </button>
+              }} > Submit </button>
           </form>
 
           {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
