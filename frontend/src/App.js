@@ -4,6 +4,7 @@ import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import InstructorProfile from './components/InstructorProfile';
 import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/LoginPage" element={<LoginPage />} />
                 <Route path="/InstructorProfile" element={<InstructorProfile />} />
                 <Route path="/ForgotPassword" element={<ForgotPassword/>} />
+                <Route path="/ResetPassword" element={<ResetPassword/>} />
             </Routes>
         </Router>
     );
