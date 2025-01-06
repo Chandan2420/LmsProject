@@ -11,7 +11,6 @@ const ForgotPassword = ({ onOtpSent }) => {
         try {
             const response = await axios.post('http://localhost:5000/api/ForgotPassword', { email });
             alert(response.data.message); // Success message
-            onOtpSent(email);
         } catch (err) {
             alert(err.response?.data?.error || 'Something went wrong'); // Error message
         }

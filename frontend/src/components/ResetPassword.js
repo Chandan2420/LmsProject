@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "./ResetPassword.css"; 
 
-const ResetPassword = ({ email }) => {
+const ResetPassword = ({ email: initialEmail }) => {
+    const [email, setEmail] = useState(initialEmail || '');
     const [otp, setOtp] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,7 +19,7 @@ const ResetPassword = ({ email }) => {
             const response = await axios.post('http://localhost:5000/api/ResetPassword', { email, otp, newPassword });
             alert(response.data.message); // Success message
         } catch (err) {
-            alert(err.response?.data?.error || 'Something went wrong'); // Error message
+          alert(err.response?.data?.error || 'Something went wrong'); // Error message
         }
     };
 
@@ -26,6 +27,15 @@ const ResetPassword = ({ email }) => {
         <div className="reset-container">
             <h2>Reset Password</h2>
             <form onSubmit={handleSubmit}>
+            {!initialEmail && (
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                )}
                 <input
                     type="text"
                     placeholder="Enter OTP"
@@ -42,7 +52,7 @@ const ResetPassword = ({ email }) => {
                 />
                 <input
                     type="password"
-                    placeholder="Confirm new password"
+                    placeholder="Enter confirm Password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
